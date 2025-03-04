@@ -16,9 +16,16 @@ body {
     color: #C4C4C4;
 }
 
-
 input[type="date"]::-webkit-inner-spin-button,
 input[type="date"]::-webkit-calendar-picker-indicator {
     display: none;
     -webkit-appearance: none;
+}
+
+.bg-trans {
+    background-color: transparent;
+}
+
+.bg-blacl-shad {
+    background-color: rgba(0, 0, 0, 0.158);
 }
