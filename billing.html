@@ -10,10 +10,10 @@
     <link rel="shortcut icon" href="./assetes/img/png/favicon-32x32.png" type="image/x-icon">
 </head>
 
-<body class="bg-[#FEFFFB] relative bg-trans bg-blacl-shad">
+<body class="bg-[#FEFFFB] md:pb-[30px] pb-4">
     <section>
         <div
-            class="max-w-[1480px] xl:px-12 lg::px-8 md:px-5 px-4 mx-auto mt-[30px] flex md:flex-row flex-col lg:gap-8 gap-4">
+            class="max-w-[1480px] xl:px-12 lg::px-8 md:px-5 px-4 mx-auto md:mt-[30px] mt-4 flex md:flex-row flex-col lg:gap-8 gap-4">
             <div
                 class="shadow-[0px_4px_15px_0px_rgba(0,0,0,0.08)] xl:px-7 xl:py-5lg:p-4 p-3 rounded-xl bg-[#fff] min-[850px]:w-[21%] min-[850px]:max-w-[280px] lg:block hidden">
                 <div class=" flex flex-col items-center ">
@@ -144,7 +144,7 @@
                                     </span>
                                     <span class="text-[#3D3D3D] sm:text-sm text-xs">Settings</span>
                                 </a>
-                                <a href="#" class="flex items-center gap-4 mt-3">
+                                <a href="./profile.html" class="flex items-center gap-4 mt-3">
                                     <span>
                                         <svg xmlns="http://www.w3.org/2000/svg" width="15" height="25"
                                             viewBox="0 0 15 25" fill="none">
@@ -325,225 +325,499 @@
                         </span>
                     </div>
                 </div>
-                <div class="lg:w-2/4">
+                <div class="flex lg:flex-row flex-col gap-[30px]">
+                    <div class="lg:w-2/4">
+                        <div
+                            class="lg:py-4 lg:p-8 md:p-4 p-3 flex justify-between w-full bg-[#397665] shadow-[0px_4px_5px_0px_rgba(0,0,0,0.08)] rounded-xl lg:mt-0 md:mt-6 mt-4">
+                            <p class="text-[#fff] lg:text-2xl sm:text-base text-sm font-medium tracking-[0.48px]">My
+                                Subscription </p>
+                        </div>
+                        <div class="bg-[#fff] shadow-[0px_4px_15px_0px_rgba(0,0,0,0.08)] rounded-xl">
+                            <div
+                                class="md:px-[30px] px-3 ms:py-3 py-2 bg-[rgba(181,_166,_66,_0.30)] md:rounded-2xl rounded-lg mt-5">
+                                <p class="text-[#3D3D3D] md:text-xl text-base !font-medium tracking-[0.4px]">Choose
+                                    Subscription
+                                </p>
+                            </div>
+                            <div class="sm:px-[30px] sm:py-5 p-3">
+                                <div>
+                                    <div class="flex gap-6">
+                                        <div class="flex items-center sm:gap-2.5 gap-1">
+                                            <input type="radio" id="5-monthly" name="plan"
+                                                class="sm:h-[18px] sm:w-[18px]">
+                                            <label for="5-monthly"
+                                                class="text-[#3D3D3D] sm:text-base text-sm font-medium tracking-[0.32]">£5
+                                                Monthly</label>
+                                        </div>
+                                        <div class="flex items-center sm:gap-2.5 gap-1">
+                                            <input type="radio" id="54-yearly" name="plan"
+                                                class="sm:h-[18px] sm:w-[18px]">
+                                            <label for="54-yearly"
+                                                class="text-[#3D3D3D] sm:text-base text-sm font-medium tracking-[0.32]">£5
+                                                Yearly</label>
+                                        </div>
+                                    </div>
+                                    <button
+                                        class="text-[#397665] text-base font-medium tracking-[0.32px] underline underline-offset-3 sm:mt-5 mt-3"
+                                        onclick="refferButton(this)">Apply
+                                        Referral Code</button>
+                                    <!-- reffer hide section -->
+                                    <div class="p-2.5 bg-[#fff] rounded-xl flex flex-col gap-2.5 fixed top-0 bottom-0 m-auto sm:right-auto right-6 flex items-center justify-center max-h-max shadow-[0px_4px_15px_0px_rgba(0,0,0,0.08)] w-full sm:max-w-[550px] max-w-[250px] hidden"
+                                        id="refferSection">
+                                        <div
+                                            class="md:py-2.5 md:px-[26px] p-2 bg-[rgba(181,166,66,0.30)] rounded-xl text-[#3D3D3D] lg:text-2xl md:text-lg text-base font-medium tracking-[0.48px] mx-auto w-full">
+                                            Referral Code
+                                        </div>
+                                        <div class="w-full">
+                                            <input type="text" placeholder="Ocf6bc45"
+                                                class="w-full outline-none md:px-5 md:py-4 p-2 border rounded-xl mx-auto w-full text-[rgba(61,_61,_61,_0.50)] md:text-lg text-sm font-bold tracking-[0.37px]">
+                                        </div>
+                                        <div class="mx-auto py-3">
+                                            <button
+                                                class="ms:py-3 p-2 lg:px-[84px] md:px-8 px-6 bg-[#397665] rounded-xl text-[#fff] md:text-lg text-sm font-medium tracking-[0.36px] cursor-pointer border border-[#397665]  hover:bg-[#fff] hover:text-[#397665] duration-300"
+                                                id="applyButton">Apply</button>
+                                        </div>
+                                    </div>
+
+                                    <div class="mt-4 flex flex-col gap-3">
+                                        <div class="flex justify-between items-center gap-4">
+                                            <span
+                                                class="w-[22%] text-nowrap text-[#3D3D3D] sm:text-base text-xs tracking-[0.32px]">Amount
+                                                due</span>
+                                            <span class="w-[60%] border-dashed border-[rgba(134,134,134,0.30)]"></span>
+                                            <span
+                                                class="w-[20%] text-right text-[#3D3D3D] sm:text-base text-xs tracking-[0.32px] text-nowrap">£
+                                                54.00</span>
+                                        </div>
+                                        <div class="flex justify-between items-center gap-4">
+                                            <span
+                                                class="w-[22%] text-nowrap text-[#3D3D3D] sm:text-base text-xs tracking-[0.32px]">Referral
+                                                discount</span>
+                                            <span
+                                                class="w-[60%] border-dashed border-[rgba(134,134,134,0.30)] border-b"></span>
+                                            <span
+                                                class="w-[20%] text-right text-[#3D3D3D] sm:text-base text-xs tracking-[0.32px] text-nowrap">£
+                                                -0.00</span>
+                                        </div>
+                                        <div class="flex justify-between items-center gap-4">
+                                            <span
+                                                class="w-[22%] text-nowrap text-[#3D3D3D] sm:text-base text-xs tracking-[0.32px]">20%
+                                                VAT</span>
+                                            <span
+                                                class="w-[60%] border-dashed border-[rgba(134,134,134,0.30)] border-b"></span>
+                                            <span
+                                                class="w-[20%] text-right text-[#3D3D3D] sm:text-base text-xs tracking-[0.32px] text-nowrap">£
+                                                10.80</span>
+                                        </div>
+                                        <div class="flex justify-between items-center gap-4">
+                                            <span
+                                                class="w-[22%] text-nowrap text-[#3D3D3D] sm:text-base text-xs tracking-[0.32px] font-medium">Payment
+                                                due Mar 19,2021</span>
+                                            <span
+                                                class="w-[20%] text-right text-[#3D3D3D] sm:text-base text-xs tracking-[0.32px] text-nowrap font-medium">£
+                                                64.80</span>
+                                        </div>
+                                    </div>
+
+                                    <button
+                                        class="text-[#397665] text-base font-medium tracking-[0.32px] underline underline-offset-3 sm:mt-5 mt-3"
+                                        onclick="addBilling(this)">Add Billing Address</button>
+                                    <!-- add billing address section -->
+                                    <div class="p-2.5 bg-[#fff] rounded-xl flex flex-col gap-2.5 absolute lg:top-6 top-36 bottom-0 m-auto right-0 left-0 flex items-center justify-center max-h-max shadow-[0px_4px_15px_0px_rgba(0,0,0,0.08)] w-full sm:max-w-[550px] max-w-[250px] hidden"
+                                        id="addBillingSection">
+                                        <div
+                                            class="md:py-2.5 md:px-[26px] p-2 bg-[rgba(181,166,66,0.30)] rounded-xl text-[#3D3D3D] lg:text-2xl md:text-2xl text-base font-medium tracking-[0.48px] mx-auto w-full">
+                                            Billing Address
+                                        </div>
+                                        <form action="#" class="w-full">
+                                            <fieldset
+                                                class=" border border-[#3D3D3D] rounded-lg xl:pb-5 sm:pb-3 pb-2
+                                                            xl:px-[28px] sm:px-5 px-3 flex justify-between items-center gap-4 w-full">
+                                                <legend class=" ms-5 text-[#3D3D3D;]
+                                                                lg:text-xl text-base font-medium tracking-[0.4px]">
+                                                    Address Line 1
+                                                </legend>
+                                                <input type="text" placeholder="Old Bounday house"
+                                                    class="mt-1.2    mt-1 text-[#3D3D3D] lg:text-lg text-sm tracking-[0.36px] w-full outline-none w-full placeholder:text-[#3D3D3D]">
+                                            </fieldset>
+                                            <fieldset
+                                                class=" border border-[#3D3D3D] rounded-lg xl:pb-5 sm:pb-3 pb-2
+                                                            xl:px-[28px] sm:px-5 px-3 flex justify-between items-center gap-4 w-full mt-2.5">
+                                                <legend class=" ms-5 text-[#3D3D3D;]
+                                                                lg:text-xl text-base font-medium tracking-[0.4px]">
+                                                    Address Line 2
+                                                </legend>
+                                                <input type="text" placeholder="London Road"
+                                                    class="mt-1.2    mt-1 text-[#3D3D3D] lg:text-lg text-sm tracking-[0.36px] w-full outline-none w-full placeholder:text-[#3D3D3D]">
+                                            </fieldset>
+                                            <fieldset
+                                                class=" border border-[#3D3D3D] rounded-lg xl:pb-5 sm:pb-3 pb-2
+                                                            xl:px-[28px] sm:px-5 px-3 flex justify-between items-center gap-4 w-full mt-2.5">
+                                                <legend class=" ms-5 text-[#3D3D3D;]
+                                                                lg:text-xl text-base font-medium tracking-[0.4px]">
+                                                    City
+                                                </legend>
+                                                <input type="text" placeholder="Sunningdale"
+                                                    class="mt-1.2    mt-1 text-[#3D3D3D] lg:text-lg text-sm tracking-[0.36px] w-full outline-none w-full placeholder:text-[#3D3D3D]">
+                                            </fieldset>
+                                            <fieldset
+                                                class=" border border-[#3D3D3D] rounded-lg xl:pb-5 sm:pb-3 pb-2
+                                                            xl:px-[28px] sm:px-5 px-3 flex justify-between items-center gap-4 w-full mt-2.5">
+                                                <legend class=" ms-5 text-[#3D3D3D;]
+                                                                lg:text-xl text-base font-medium tracking-[0.4px]">
+                                                    Region
+                                                </legend>
+                                                <input type="text" placeholder="Berkshire"
+                                                    class="mt-1.2    mt-1 text-[#3D3D3D] lg:text-lg text-sm tracking-[0.36px] w-full outline-none w-full placeholder:text-[#3D3D3D]">
+                                            </fieldset>
+                                            <fieldset
+                                                class=" border border-[#3D3D3D] rounded-lg xl:pb-5 sm:pb-3 pb-2
+                                                            xl:px-[28px] sm:px-5 px-3 flex justify-between items-center gap-4 w-full mt-2.5">
+                                                <legend class=" ms-5 text-[#3D3D3D;]
+                                                                lg:text-xl text-base font-medium tracking-[0.4px]">
+                                                    Post Code
+                                                </legend>
+                                                <input type="text" placeholder="SL5 0DJ"
+                                                    class="mt-1.2    mt-1 text-[#3D3D3D] lg:text-lg text-sm tracking-[0.36px] w-full outline-none w-full placeholder:text-[#3D3D3D]">
+                                            </fieldset>
+                                            <fieldset
+                                                class=" border border-[#3D3D3D] rounded-lg xl:pb-5 sm:pb-3 pb-2
+                                                            xl:px-[28px] sm:px-5 px-3 flex justify-between items-center gap-4 w-full mt-2.5">
+                                                <legend class=" ms-5 text-[#3D3D3D;]
+                                                                lg:text-xl text-base font-medium tracking-[0.4px]">
+                                                    Country
+                                                </legend>
+                                                <input type="text" placeholder="UK"
+                                                    class="mt-1.2    mt-1 text-[#3D3D3D] lg:text-lg text-sm tracking-[0.36px] w-full outline-none w-full placeholder:text-[#3D3D3D]">
+                                                <span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="15" height="8"
+                                                        viewBox="0 0 15 8" fill="none">
+                                                        <path
+                                                            d="M13.3077 1L8.24165 6.74146C7.64336 7.41951 6.66434 7.41951 6.06605 6.74146L1 1"
+                                                            stroke="#3D3D3D" stroke-width="1.5" stroke-miterlimit="10"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </span>
+                                            </fieldset>
+                                            <fieldset
+                                                class=" border border-[#3D3D3D] rounded-lg xl:pb-5 sm:pb-3 pb-2
+                                                            xl:px-[28px] sm:px-5 px-3 flex justify-between items-center gap-4 w-full mt-2.5">
+                                                <legend class=" ms-5 text-[#3D3D3D;]
+                                                                lg:text-xl text-base font-medium tracking-[0.4px]">
+                                                    VAT Number
+                                                </legend>
+                                                <input type="text" placeholder="GB123456789"
+                                                    class="mt-1.2    mt-1 text-[#3D3D3D] lg:text-lg text-sm tracking-[0.36px] w-full outline-none w-full placeholder:text-[#3D3D3D]">
+                                            </fieldset>
+
+                                            <div class="w-full flex justify-center">
+                                                <input type="submit" value="Apply" id="applyButton2"
+                                                    class="ms:py-3 p-2 lg:px-[84px] md:px-8 px-6 bg-[#397665] rounded-xl text-[#fff] md:text-lg text-sm font-medium tracking-[0.36px] mt-2.5 cursor-pointer border border-[#397665]  hover:bg-[#fff] hover:text-[#397665] duration-300">
+                                            </div>
+                                        </form>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="md:px-[30px] px-3 ms:py-3 py-2 bg-[rgba(181,_166,_66,_0.30)] md:rounded-2xl rounded-lg mt-5">
+                                <p class="text-[#3D3D3D] md:text-xl text-base !font-medium tracking-[0.4px]">Choose
+                                    Subscription
+                                </p>
+                            </div>
+                            <div class="sm:px-[30px] sm:py-5 p-3 flex flex-col ms:gap-5 gap-3">
+                                <input type="text" placeholder="Card holder name"
+                                    class="bg-[#397665] md:py-3 py-2 md:px-5 px-3 w-full outline-none bg-[rgba(181,_166,_66,_0.10)] rounded-xl md:text-base text-xs">
+                                <input type="text" placeholder="Card holder name"
+                                    class="bg-[#397665] md:py-3 py-2 md:px-5 px-3 w-full outline-none bg-[rgba(181,_166,_66,_0.10)] rounded-xl md:text-base text-xs">
+                                <div class="flex ms:gap-5 gap-3">
+                                    <input type="text" placeholder="Expiry date" onfocus="(this.type='date')" class=" bg-[#397665] md:py-3 py-2 md:px-5 px-3 w-full outline-none
+                                                        bg-[rgba(181,_166,_66,_0.10)] rounded-xl md:text-base text-xs">
+                                    <input type="number" placeholder="Cvv"
+                                        class="bg-[#397665] md:py-3 py-2 md:px-5 px-3 w-full outline-none bg-[rgba(181,_166,_66,_0.10)] rounded-xl md:text-base text-xs">
+                                </div>
+                                <div class="w-full flex justify-center">
+                                    <input type="submit" value="Pay £ 64.80"
+                                        class="ms:py-3 p-2 lg:px-[84px] md:px-8 px-6 bg-[#397665] rounded-xl text-[#fff] md:text-lg text-sm font-medium tracking-[0.36px] mt-2.5 cursor-pointer border border-[#397665]  hover:bg-[#fff] hover:text-[#397665] duration-300">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- referral scheme -->
+                    <div class="lg:w-2/4">
+                        <div
+                            class="lg:py-4 lg:p-8 md:p-4 p-3 flex justify-between w-full bg-[#397665] shadow-[0px_4px_5px_0px_rgba(0,0,0,0.08)] rounded-xl lg:mt-0 md:mt-6 mt-4">
+                            <p class="text-[#fff] lg:text-2xl sm:text-base text-sm font-medium tracking-[0.48px]">
+                                Referral Scheme</p>
+                        </div>
+                        <div class="bg-[#fff] shadow-[0px_4px_15px_0px_rgba(0,0,0,0.08)] rounded-xl">
+                            <div
+                                class="md:px-[30px] px-3 ms:py-3 py-2 bg-[rgba(181,_166,_66,_0.30)] md:rounded-2xl rounded-lg mt-5 flex justify-between">
+                                <p class="text-[#3D3D3D] md:text-xl sm:text-base text-sm !font-medium tracking-[0.4px]">
+                                    CMy
+                                    Referral Code :</p>
+                                <div class="flex items-center gap-2.5">
+                                    <span
+                                        class="text-[#3D3D3D] md:text-xl sm:text-base text-sm !font-medium tracking-[0.4px]">Ocf6bc45</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="22" height="22" viewBox="0 0 22 22"
+                                        fill="none">
+                                        <path
+                                            d="M10.175 20.8542H6.325C2.74084 20.8542 1.14584 19.2592 1.14584 15.675V11.825C1.14584 8.24084 2.74084 6.64584 6.325 6.64584H10.175C13.7592 6.64584 15.3542 8.24084 15.3542 11.825V15.675C15.3542 19.2592 13.7592 20.8542 10.175 20.8542ZM6.325 8.02084C3.48334 8.02084 2.52084 8.98334 2.52084 11.825V15.675C2.52084 18.5167 3.48334 19.4792 6.325 19.4792H10.175C13.0167 19.4792 13.9792 18.5167 13.9792 15.675V11.825C13.9792 8.98334 13.0167 8.02084 10.175 8.02084H6.325Z"
+                                            fill="#3D3D3D" />
+                                        <path
+                                            d="M15.675 15.3542H14.6667C14.2908 15.3542 13.9792 15.0425 13.9792 14.6667V11.825C13.9792 8.98334 13.0167 8.02084 10.175 8.02084H7.33334C6.9575 8.02084 6.64584 7.70918 6.64584 7.33334V6.32501C6.64584 2.74084 8.24084 1.14584 11.825 1.14584H15.675C19.2592 1.14584 20.8542 2.74084 20.8542 6.32501V10.175C20.8542 13.7592 19.2592 15.3542 15.675 15.3542ZM15.3542 13.9792H15.675C18.5167 13.9792 19.4792 13.0167 19.4792 10.175V6.32501C19.4792 3.48334 18.5167 2.52084 15.675 2.52084H11.825C8.98334 2.52084 8.02084 3.48334 8.02084 6.32501V6.64584H10.175C13.7592 6.64584 15.3542 8.24084 15.3542 11.825V13.9792Z"
+                                            fill="#3D3D3D" />
+                                    </svg>
+                                </div>
+                            </div>
+                            <div class="sm:py-5 py-3 sm:px-[30px] px-3">
+                                <div class="flex gap-[14px] items-center">
+                                    <span class="text-[#3D3D3D] sm:text-base text-sm tracking-[0.32px]">Subscription
+                                        Discount:</span>
+                                    <span
+                                        class="text-[#B5A642] sm:text-base text-sm tracking-[0.32px] font-medium">0%</span>
+                                </div>
+                                <div
+                                    class="sm:mt-5 mt-4 shadow-[0px_4px_15px_0px_rgba(0,0,0,0.08)] bg-[#fff] rounded-xl">
+                                    <table class="w-full">
+                                        <thead class="w-full bg-[rgba(181,166,66,0.15)] rounded-xl">
+                                            <tr>
+                                                <th class="flex items-center gap-4 sm:ps-[45px] ps-3 py-3">
+                                                    <span
+                                                        class="text-[#3D3D3D] md:text-base text-sm font-medium tracking-[0.32px]">Date</span>
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="13" height="7"
+                                                        viewBox="0 0 13 7" fill="none">
+                                                        <path
+                                                            d="M11.7236 1L7.38034 5.03882C6.86741 5.5158 6.02807 5.5158 5.51514 5.03882L1.17188 1"
+                                                            stroke="#3D3D3D" stroke-width="1.5" stroke-miterlimit="10"
+                                                            stroke-linecap="round" stroke-linejoin="round" />
+                                                    </svg>
+                                                </th>
+                                                <th
+                                                    class="text-start text-[#3D3D3D] md:text-base text-sm font-medium tracking-[0.32px]">
+                                                    Organisation</th>
+                                            </tr>
+                                        </thead>
+                                        <div>
+                                            <tbody>
+                                                <tr class="border-b">
+                                                    <td
+                                                        class="py-4 sm:ps-[45px] ps-3 text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.32px">
+                                                        17 July,
+                                                        2020</td>
+                                                    <td
+                                                        class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.32px">
+                                                        Corporate Business</td>
+                                                </tr>
+                                                <tr class="border-b">
+                                                    <td
+                                                        class="py-4 sm:ps-[45px] ps-3 text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.32px">
+                                                        17 July,
+                                                        2020</td>
+                                                    <td
+                                                        class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.32px">
+                                                        Corporate Business</td>
+                                                </tr>
+                                                <tr class="border-b">
+                                                    <td
+                                                        class="py-4 sm:ps-[45px] ps-3 text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.32px">
+                                                        17 July,
+                                                        2020</td>
+                                                    <td
+                                                        class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.32px">
+                                                        Corporate Business</td>
+                                                </tr>
+                                            </tbody>
+                                        </div>
+                                    </table>
+                                </div>
+                                <div>
+                                    <ul class="ps-5 md:mt-[30px] mt-3">
+                                        <li
+                                            class="list-disc text-[#3D3D3D] md:text-base sm:text-sm text-xs font-medium tracking-[0.32px]">
+                                            Introduce a Friend to
+                                            Athena</li>
+                                        <li
+                                            class="sm:mt-2 mt-1 text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.32px]">
+                                            If you someone who would
+                                            benifit from
+                                            Athena, Send them
+                                            your
+                                            referral code
+                                            <span class="font-medium">(Ocf6bc45)</span>
+                                        </li>
+                                        <li
+                                            class="list-disc text-[#3D3D3D] md:text-base sm:text-sm text-xs font-medium tracking-[0.32px] sm:mt-5 mt-2">
+                                            Get Discount on your subscription</li>
+                                        <li
+                                            class="sm:mt-2 mt-1 text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.32px]">
+                                            if they up and subscribe, you both will receive a 10%
+                                            subscriptiondiscount for as long as you’re Athena customers.</li>
+                                        <li
+                                            class="list-disc text-[#3D3D3D] md:text-base sm:text-sm text-xs font-medium tracking-[0.32px] sm:mt-5 mt-2">
+                                            Keep refering and watch your discount add up</li>
+                                        <li
+                                            class="sm:mt-2 mt-1 text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.32px]">
+                                            For each person and sign up and subscribes using you
+                                            code,you’ll receive on additional 10% discount,until you’re using
+                                            Athena for Trial</li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="mt-[30px]">
                     <div
                         class="lg:py-4 lg:p-8 md:p-4 p-3 flex justify-between w-full bg-[#397665] shadow-[0px_4px_5px_0px_rgba(0,0,0,0.08)] rounded-xl lg:mt-0 md:mt-6 mt-4">
-                        <p class="text-[#fff] lg:text-2xl sm:text-base text-sm font-medium tracking-[0.48px]">My
-                            Subscription </p>
+                        <p class="text-[#fff] lg:text-2xl sm:text-base text-sm font-medium tracking-[0.48px]">Payment
+                            History</p>
                     </div>
-                    <div class="bg-[#fff] shadow-[0px_4px_15px_0px_rgba(0,0,0,0.08)] rounded-xl">
-                        <div
-                            class="md:px-[30px] px-3 ms:py-3 py-2 bg-[rgba(181,_166,_66,_0.30)] md:rounded-2xl rounded-lg mt-5">
-                            <p class="text-[#3D3D3D] md:text-xl text-base !font-medium tracking-[0.4px]">Choose
-                                Subscription
-                            </p>
-                        </div>
-                        <div class="sm:px-[30px] sm:py-5 p-3">
-                            <div>
-                                <div class="flex gap-6">
-                                    <div class="flex items-center sm:gap-2.5 gap-1">
-                                        <input type="radio" id="5-monthly" name="plan" class="sm:h-[18px] sm:w-[18px]">
-                                        <label for="5-monthly"
-                                            class="text-[#3D3D3D] sm:text-base text-sm font-medium tracking-[0.32]">£5
-                                            Monthly</label>
-                                    </div>
-                                    <div class="flex items-center sm:gap-2.5 gap-1">
-                                        <input type="radio" id="54-yearly" name="plan" class="sm:h-[18px] sm:w-[18px]">
-                                        <label for="54-yearly"
-                                            class="text-[#3D3D3D] sm:text-base text-sm font-medium tracking-[0.32]">£5
-                                            Yearly</label>
-                                    </div>
-                                </div>
-                                <button
-                                    class="text-[#397665] text-base font-medium tracking-[0.32px] underline underline-offset-3 sm:mt-5 mt-3"
-                                    onclick="refferButton(this)">Apply
-                                    Referral Code</button>
-                                <!-- reffer hide section -->
-                                <div class="p-2.5 bg-[#fff] rounded-xl flex flex-col gap-2.5 fixed top-0 bottom-0 m-auto sm:right-auto right-6 flex items-center justify-center max-h-max shadow-[0px_4px_15px_0px_rgba(0,0,0,0.08)] w-full sm:max-w-[550px] max-w-[250px] hidden"
-                                    id="refferSection">
-                                    <div
-                                        class="md:py-2.5 md:px-[26px] p-2 bg-[rgba(181,166,66,0.30)] rounded-xl text-[#3D3D3D] lg:text-2xl md:text-lg text-base font-medium tracking-[0.48px] mx-auto w-full">
-                                        Referral Code
-                                    </div>
-                                    <div class="w-full">
-                                        <input type="text" placeholder="Ocf6bc45"
-                                            class="w-full outline-none md:px-5 md:py-4 p-2 border rounded-xl mx-auto w-full text-[rgba(61,_61,_61,_0.50)] md:text-lg text-sm font-bold tracking-[0.37px]">
-                                    </div>
-                                    <div class="mx-auto py-3">
-                                        <button
-                                            class="ms:py-3 p-2 lg:px-[84px] md:px-8 px-6 bg-[#397665] rounded-xl text-[#fff] md:text-lg text-sm font-medium tracking-[0.36px] cursor-pointer border border-[#397665]  hover:bg-[#fff] hover:text-[#397665] duration-300"
-                                            id="applyButton">Apply</button>
-                                    </div>
-                                </div>
-
-                                <div class="mt-4 flex flex-col gap-3">
-                                    <div class="flex justify-between items-center gap-4">
-                                        <span
-                                            class="w-[22%] text-nowrap text-[#3D3D3D] sm:text-base text-xs tracking-[0.32px]">Amount
-                                            due</span>
-                                        <span
-                                            class="w-[60%] border-dashed border-[rgba(134,134,134,0.30)] border-b"></span>
-                                        <span
-                                            class="w-[20%] text-right text-[#3D3D3D] sm:text-base text-xs tracking-[0.32px] text-nowrap">£
-                                            54.00</span>
-                                    </div>
-                                    <div class="flex justify-between items-center gap-4">
-                                        <span
-                                            class="w-[22%] text-nowrap text-[#3D3D3D] sm:text-base text-xs tracking-[0.32px]">Referral
-                                            discount</span>
-                                        <span
-                                            class="w-[60%] border-dashed border-[rgba(134,134,134,0.30)] border-b"></span>
-                                        <span
-                                            class="w-[20%] text-right text-[#3D3D3D] sm:text-base text-xs tracking-[0.32px] text-nowrap">£
-                                            -0.00</span>
-                                    </div>
-                                    <div class="flex justify-between items-center gap-4">
-                                        <span
-                                            class="w-[22%] text-nowrap text-[#3D3D3D] sm:text-base text-xs tracking-[0.32px]">20%
-                                            VAT</span>
-                                        <span
-                                            class="w-[60%] border-dashed border-[rgba(134,134,134,0.30)] border-b"></span>
-                                        <span
-                                            class="w-[20%] text-right text-[#3D3D3D] sm:text-base text-xs tracking-[0.32px] text-nowrap">£
-                                            10.80</span>
-                                    </div>
-                                    <div class="flex justify-between items-center gap-4">
-                                        <span
-                                            class="w-[22%] text-nowrap text-[#3D3D3D] sm:text-base text-xs tracking-[0.32px] font-medium">Payment
-                                            due Mar 19,2021</span>
-                                        <span
-                                            class="w-[20%] text-right text-[#3D3D3D] sm:text-base text-xs tracking-[0.32px] text-nowrap font-medium">£
-                                            64.80</span>
-                                    </div>
-                                </div>
-
-                                <button
-                                    class="text-[#397665] text-base font-medium tracking-[0.32px] underline underline-offset-3 sm:mt-5 mt-3"
-                                    onclick="addBilling(this)">Add Billing Address</button>
-                                <!-- add billing address section -->
-                                <div class="p-2.5 bg-[#fff] rounded-xl flex flex-col gap-2.5 absolute lg:top-6 top-36 bottom-0 m-auto right-0 left-0 flex items-center justify-center max-h-max shadow-[0px_4px_15px_0px_rgba(0,0,0,0.08)] w-full sm:max-w-[550px] max-w-[250px] hidden"
-                                    id="addBillingSection">
-                                    <div
-                                        class="md:py-2.5 md:px-[26px] p-2 bg-[rgba(181,166,66,0.30)] rounded-xl text-[#3D3D3D] lg:text-2xl md:text-2xl text-base font-medium tracking-[0.48px] mx-auto w-full">
-                                        Billing Address
-                                    </div>
-                                    <form action="#" class="w-full">
-                                        <fieldset class=" border border-[#3D3D3D] rounded-lg xl:pb-5 sm:pb-3 pb-2
-                                        xl:px-[28px] sm:px-5 px-3 flex justify-between items-center gap-4 w-full">
-                                            <legend class=" ms-5 text-[#3D3D3D;]
-                                            lg:text-xl text-base font-medium tracking-[0.4px]">
-                                                Address Line 1
-                                            </legend>
-                                            <input type="text" placeholder="Old Bounday house"
-                                                class="mt-1.2    mt-1 text-[#3D3D3D] lg:text-lg text-sm tracking-[0.36px] w-full outline-none w-full placeholder:text-[#3D3D3D]">
-                                        </fieldset>
-                                        <fieldset
-                                            class=" border border-[#3D3D3D] rounded-lg xl:pb-5 sm:pb-3 pb-2
-                                        xl:px-[28px] sm:px-5 px-3 flex justify-between items-center gap-4 w-full mt-2.5">
-                                            <legend class=" ms-5 text-[#3D3D3D;]
-                                            lg:text-xl text-base font-medium tracking-[0.4px]">
-                                                Address Line 2
-                                            </legend>
-                                            <input type="text" placeholder="London Road"
-                                                class="mt-1.2    mt-1 text-[#3D3D3D] lg:text-lg text-sm tracking-[0.36px] w-full outline-none w-full placeholder:text-[#3D3D3D]">
-                                        </fieldset>
-                                        <fieldset
-                                            class=" border border-[#3D3D3D] rounded-lg xl:pb-5 sm:pb-3 pb-2
-                                        xl:px-[28px] sm:px-5 px-3 flex justify-between items-center gap-4 w-full mt-2.5">
-                                            <legend class=" ms-5 text-[#3D3D3D;]
-                                            lg:text-xl text-base font-medium tracking-[0.4px]">
-                                                City
-                                            </legend>
-                                            <input type="text" placeholder="Sunningdale"
-                                                class="mt-1.2    mt-1 text-[#3D3D3D] lg:text-lg text-sm tracking-[0.36px] w-full outline-none w-full placeholder:text-[#3D3D3D]">
-                                        </fieldset>
-                                        <fieldset
-                                            class=" border border-[#3D3D3D] rounded-lg xl:pb-5 sm:pb-3 pb-2
-                                        xl:px-[28px] sm:px-5 px-3 flex justify-between items-center gap-4 w-full mt-2.5">
-                                            <legend class=" ms-5 text-[#3D3D3D;]
-                                            lg:text-xl text-base font-medium tracking-[0.4px]">
-                                                Region
-                                            </legend>
-                                            <input type="text" placeholder="Berkshire"
-                                                class="mt-1.2    mt-1 text-[#3D3D3D] lg:text-lg text-sm tracking-[0.36px] w-full outline-none w-full placeholder:text-[#3D3D3D]">
-                                        </fieldset>
-                                        <fieldset
-                                            class=" border border-[#3D3D3D] rounded-lg xl:pb-5 sm:pb-3 pb-2
-                                        xl:px-[28px] sm:px-5 px-3 flex justify-between items-center gap-4 w-full mt-2.5">
-                                            <legend class=" ms-5 text-[#3D3D3D;]
-                                            lg:text-xl text-base font-medium tracking-[0.4px]">
-                                                Post Code
-                                            </legend>
-                                            <input type="text" placeholder="SL5 0DJ"
-                                                class="mt-1.2    mt-1 text-[#3D3D3D] lg:text-lg text-sm tracking-[0.36px] w-full outline-none w-full placeholder:text-[#3D3D3D]">
-                                        </fieldset>
-                                        <fieldset
-                                            class=" border border-[#3D3D3D] rounded-lg xl:pb-5 sm:pb-3 pb-2
-                                        xl:px-[28px] sm:px-5 px-3 flex justify-between items-center gap-4 w-full mt-2.5">
-                                            <legend class=" ms-5 text-[#3D3D3D;]
-                                            lg:text-xl text-base font-medium tracking-[0.4px]">
-                                                Country
-                                            </legend>
-                                            <input type="text" placeholder="UK"
-                                                class="mt-1.2    mt-1 text-[#3D3D3D] lg:text-lg text-sm tracking-[0.36px] w-full outline-none w-full placeholder:text-[#3D3D3D]">
-                                            <span>
-                                                <svg xmlns="http://www.w3.org/2000/svg" width="15" height="8"
-                                                    viewBox="0 0 15 8" fill="none">
-                                                    <path
-                                                        d="M13.3077 1L8.24165 6.74146C7.64336 7.41951 6.66434 7.41951 6.06605 6.74146L1 1"
-                                                        stroke="#3D3D3D" stroke-width="1.5" stroke-miterlimit="10"
-                                                        stroke-linecap="round" stroke-linejoin="round" />
-                                                </svg>
-                                            </span>
-                                        </fieldset>
-                                        <fieldset
-                                            class=" border border-[#3D3D3D] rounded-lg xl:pb-5 sm:pb-3 pb-2
-                                        xl:px-[28px] sm:px-5 px-3 flex justify-between items-center gap-4 w-full mt-2.5">
-                                            <legend class=" ms-5 text-[#3D3D3D;]
-                                            lg:text-xl text-base font-medium tracking-[0.4px]">
-                                                VAT Number
-                                            </legend>
-                                            <input type="text" placeholder="GB123456789"
-                                                class="mt-1.2    mt-1 text-[#3D3D3D] lg:text-lg text-sm tracking-[0.36px] w-full outline-none w-full placeholder:text-[#3D3D3D]">
-                                        </fieldset>
-
-                                        <div class="w-full flex justify-center">
-                                            <input type="submit" value="Apply" id="applyButton2"
-                                                class="ms:py-3 p-2 lg:px-[84px] md:px-8 px-6 bg-[#397665] rounded-xl text-[#fff] md:text-lg text-sm font-medium tracking-[0.36px] mt-2.5 cursor-pointer border border-[#397665]  hover:bg-[#fff] hover:text-[#397665] duration-300">
-                                        </div>
-                                    </form>
-                                </div>
-                            </div>
-                        </div>
-                        <div
-                            class="md:px-[30px] px-3 ms:py-3 py-2 bg-[rgba(181,_166,_66,_0.30)] md:rounded-2xl rounded-lg mt-5">
-                            <p class="text-[#3D3D3D] md:text-xl text-base !font-medium tracking-[0.4px]">Choose
-                                Subscription
-                            </p>
-                        </div>
-                        <div class="sm:px-[30px] sm:py-5 p-3 flex flex-col ms:gap-5 gap-3">
-                            <input type="text" placeholder="Card holder name"
-                                class="bg-[#397665] md:py-3 py-2 md:px-5 px-3 w-full outline-none bg-[rgba(181,_166,_66,_0.10)] rounded-xl md:text-base text-xs">
-                            <input type="text" placeholder="Card holder name"
-                                class="bg-[#397665] md:py-3 py-2 md:px-5 px-3 w-full outline-none bg-[rgba(181,_166,_66,_0.10)] rounded-xl md:text-base text-xs">
-                            <div class="flex ms:gap-5 gap-3">
-                                <input type="text" placeholder="Expiry date" onfocus="(this.type='date')" class=" bg-[#397665] md:py-3 py-2 md:px-5 px-3 w-full outline-none
-                                    bg-[rgba(181,_166,_66,_0.10)] rounded-xl md:text-base text-xs">
-                                <input type="number" placeholder="Cvv"
-                                    class="bg-[#397665] md:py-3 py-2 md:px-5 px-3 w-full outline-none bg-[rgba(181,_166,_66,_0.10)] rounded-xl md:text-base text-xs">
-                            </div>
-                            <div class="w-full flex justify-center">
-                                <input type="submit" value="Pay £ 64.80"
-                                    class="ms:py-3 p-2 lg:px-[84px] md:px-8 px-6 bg-[#397665] rounded-xl text-[#fff] md:text-lg text-sm font-medium tracking-[0.36px] mt-2.5 cursor-pointer border border-[#397665]  hover:bg-[#fff] hover:text-[#397665] duration-300">
-                            </div>
-                        </div>
+                    <div class="overflow-scroll" style="scrollbar-width: none;">
+                        <table
+                            class="w-full bg-[#fff] md:mt-5 rounded-xl mt-4 min-w-[600px] shadow-[0px_4px_15px_0px_rgba(0,0,0,0.08)]">
+                            <thead class="w-full bg-[rgba(181,166,66,0.30)]">
+                                <th
+                                    class="ps-2 text-[#3D3D3D] md:text-xl sm:text-base text-sm font-medium tracking-[0.4px]">
+                                    ID</th>
+                                <th class=" flex items-center gap-2 justify-center items-center sm:py-3 py-2">
+                                    <span>Date</span>
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="14" height="7" viewBox="0 0 14 7"
+                                        fill="none">
+                                        <path
+                                            d="M13 1L8.06061 5.59317C7.47727 6.13561 6.52273 6.13561 5.93939 5.59317L1 1"
+                                            stroke="#3D3D3D" stroke-width="1.5" stroke-miterlimit="10"
+                                            stroke-linecap="round" stroke-linejoin="round" />
+                                    </svg>
+                                </th>
+                                <th>Payment method</th>
+                                <th>Amount</th>
+                                <th class="text-end pe-8">Receipt</th>
+                            </thead>
+                            <tbody class="text-center">
+                                <tr class="border-b border-[#868686]">
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">101
+                                    </td>
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">17
+                                        July,
+                                        2020
+                                    </td>
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">
+                                        Card</td>
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">£
+                                        5400</td>
+                                    <td
+                                        class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px] flex justify-end pe-14 sm:py-[15px] py-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16"
+                                            viewBox="0 0 12 16" fill="none">
+                                            <path
+                                                d="M5.46967 12.5303C5.76256 12.8232 6.23744 12.8232 6.53033 12.5303L11.3033 7.75736C11.5962 7.46447 11.5962 6.98959 11.3033 6.6967C11.0104 6.40381 10.5355 6.40381 10.2426 6.6967L6 10.9393L1.75736 6.6967C1.46447 6.40381 0.989592 6.40381 0.696699 6.6967C0.403805 6.98959 0.403805 7.46447 0.696699 7.75736L5.46967 12.5303ZM5.25 -3.27836e-08L5.25 12L6.75 12L6.75 3.27836e-08L5.25 -3.27836e-08Z"
+                                                fill="#397665" />
+                                            <line x1="1" y1="15.25" x2="11" y2="15.25" stroke="#397665"
+                                                stroke-width="1.5" />
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-[#868686]">
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">101
+                                    </td>
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">17
+                                        July,
+                                        2020
+                                    </td>
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">
+                                        Card</td>
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">£
+                                        5400</td>
+                                    <td
+                                        class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px] flex justify-end pe-14 sm:py-[15px] py-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16"
+                                            viewBox="0 0 12 16" fill="none">
+                                            <path
+                                                d="M5.46967 12.5303C5.76256 12.8232 6.23744 12.8232 6.53033 12.5303L11.3033 7.75736C11.5962 7.46447 11.5962 6.98959 11.3033 6.6967C11.0104 6.40381 10.5355 6.40381 10.2426 6.6967L6 10.9393L1.75736 6.6967C1.46447 6.40381 0.989592 6.40381 0.696699 6.6967C0.403805 6.98959 0.403805 7.46447 0.696699 7.75736L5.46967 12.5303ZM5.25 -3.27836e-08L5.25 12L6.75 12L6.75 3.27836e-08L5.25 -3.27836e-08Z"
+                                                fill="#397665" />
+                                            <line x1="1" y1="15.25" x2="11" y2="15.25" stroke="#397665"
+                                                stroke-width="1.5" />
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-[#868686]">
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">101
+                                    </td>
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">17
+                                        July,
+                                        2020
+                                    </td>
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">
+                                        Card</td>
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">£
+                                        5400</td>
+                                    <td
+                                        class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px] flex justify-end pe-14 sm:py-[15px] py-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16"
+                                            viewBox="0 0 12 16" fill="none">
+                                            <path
+                                                d="M5.46967 12.5303C5.76256 12.8232 6.23744 12.8232 6.53033 12.5303L11.3033 7.75736C11.5962 7.46447 11.5962 6.98959 11.3033 6.6967C11.0104 6.40381 10.5355 6.40381 10.2426 6.6967L6 10.9393L1.75736 6.6967C1.46447 6.40381 0.989592 6.40381 0.696699 6.6967C0.403805 6.98959 0.403805 7.46447 0.696699 7.75736L5.46967 12.5303ZM5.25 -3.27836e-08L5.25 12L6.75 12L6.75 3.27836e-08L5.25 -3.27836e-08Z"
+                                                fill="#397665" />
+                                            <line x1="1" y1="15.25" x2="11" y2="15.25" stroke="#397665"
+                                                stroke-width="1.5" />
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-[#868686]">
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">101
+                                    </td>
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">17
+                                        July,
+                                        2020
+                                    </td>
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">
+                                        Card</td>
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">£
+                                        5400</td>
+                                    <td
+                                        class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px] flex justify-end pe-14 sm:py-[15px] py-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16"
+                                            viewBox="0 0 12 16" fill="none">
+                                            <path
+                                                d="M5.46967 12.5303C5.76256 12.8232 6.23744 12.8232 6.53033 12.5303L11.3033 7.75736C11.5962 7.46447 11.5962 6.98959 11.3033 6.6967C11.0104 6.40381 10.5355 6.40381 10.2426 6.6967L6 10.9393L1.75736 6.6967C1.46447 6.40381 0.989592 6.40381 0.696699 6.6967C0.403805 6.98959 0.403805 7.46447 0.696699 7.75736L5.46967 12.5303ZM5.25 -3.27836e-08L5.25 12L6.75 12L6.75 3.27836e-08L5.25 -3.27836e-08Z"
+                                                fill="#397665" />
+                                            <line x1="1" y1="15.25" x2="11" y2="15.25" stroke="#397665"
+                                                stroke-width="1.5" />
+                                        </svg>
+                                    </td>
+                                </tr>
+                                <tr class="border-b border-[#868686]">
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">101
+                                    </td>
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">17
+                                        July,
+                                        2020
+                                    </td>
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">
+                                        Card</td>
+                                    <td class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px]">£
+                                        5400</td>
+                                    <td
+                                        class="text-[#3D3D3D] md:text-base sm:text-sm text-xs tracking-[0.4px] flex justify-end pe-14 sm:py-[15px] py-2">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="12" height="16"
+                                            viewBox="0 0 12 16" fill="none">
+                                            <path
+                                                d="M5.46967 12.5303C5.76256 12.8232 6.23744 12.8232 6.53033 12.5303L11.3033 7.75736C11.5962 7.46447 11.5962 6.98959 11.3033 6.6967C11.0104 6.40381 10.5355 6.40381 10.2426 6.6967L6 10.9393L1.75736 6.6967C1.46447 6.40381 0.989592 6.40381 0.696699 6.6967C0.403805 6.98959 0.403805 7.46447 0.696699 7.75736L5.46967 12.5303ZM5.25 -3.27836e-08L5.25 12L6.75 12L6.75 3.27836e-08L5.25 -3.27836e-08Z"
+                                                fill="#397665" />
+                                            <line x1="1" y1="15.25" x2="11" y2="15.25" stroke="#397665"
+                                                stroke-width="1.5" />
+                                        </svg>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
                     </div>
                 </div>
             </div>
         </div>
 
         <!-- sidebar -->
-        <div id="sidebar"
+        <div id=" sidebar"
             class="sidebar absolute z-[100] top-0 left-0 h-full w-64 bg-[#fff] w-full sm:w-[400px] text-white shadow-xl transition-all duration-500 ease-in-out z-50 hidden overflow-auto">
             <div
                 class="flex justify-between items-center max-w-[1440px] max-[359px]:px-4 px-8 md:px-10 xl:px-[50px] mx-auto pt-8">
@@ -562,8 +836,10 @@
                 <div class="flex flex-col items-center">
                     <div
                         class="bg-[url('assetes/img/svg/bg-of-no.svg')] bg-[length:100%_100%] lg:p-8 p-4 w-full md:text-start text-center mt-2">
-                        <p class="text-[#fff] xl:text-[22px] text-lg tracking-[0.44px]">Profit</p>
-                        <p class="text-[#fff] xl:text-[38px] text-2xl font-medium tracking-[0.76px]">£1673</p>
+                        <p class="text-[#fff] xl:text-[22px] text-lg tracking-[0.44px]">
+                            Profit</p>
+                        <p class="text-[#fff] xl:text-[38px] text-2xl font-medium tracking-[0.76px]">
+                            £1673</p>
                     </div>
                 </div>
                 <div class="lxl:mt-5 mt-3 flex gap-1 flex-col justify-between">
@@ -693,7 +969,8 @@
                                                 fill="#3D3D3D" />
                                         </svg>
                                     </span>
-                                    <span class="text-[#3D3D3D] sm:text-sm text-xs">User Profile</span>
+                                    <span class="text-[#3D3D3D] sm:text-sm text-xs">User
+                                        Profile</span>
                                 </a>
                             </div>
                         </div>
@@ -760,7 +1037,8 @@
                     </div>
                 </div>
                 <form action="#" class="md:mt-[75px] sm:t-8 mt-6">
-                    <p class="text-[#3D3D3D] lg:text-2xl text-xl tracking-[0.48px]">Filter</p>
+                    <p class="text-[#3D3D3D] lg:text-2xl text-xl tracking-[0.48px]">Filter
+                    </p>
                     <div class="bg-[rgba(181,_166,_66,_0.15)] lg:px-[15px] lg:py-5 p-3 rounded-xl mt-4">
                         <div
                             class="lg:p-[9px] p-1.5 border border-[rgba(181,_166,_66,_0.50)] rounded-lg flex gap-1 items-center bg-[#fff]">
@@ -792,7 +1070,8 @@
                                     stroke-linecap="round" stroke-linejoin="round" />
                             </svg>
                         </div>
-                        <p class="text-center text-[#3D3D3D] text-sm tracking-[0.28px] lg:mt-3 mt-2">To</p>
+                        <p class="text-center text-[#3D3D3D] text-sm tracking-[0.28px] lg:mt-3 mt-2">
+                            To</p>
                         <div
                             class="lg:p-[9px] p-1.5 border border-[rgba(181,_166,_66,_0.50)] rounded-lg flex gap-1 items-center bg-[#fff] lg:mt-3 mt-2">
                             <input type="text" placeholder="18/08/2025" onfocus="(this.type='date')"
